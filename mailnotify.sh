@@ -6,6 +6,7 @@
 # This makes use of inotify-tools.  On a Fedora-based system, install
 # via 'yum install inotify-tools'
 #
+# Copyright 2013 Jeff Cody, jeff@codyprime.org
 # This is distributed as GPLv2; See LICENSE file for details.
 
 

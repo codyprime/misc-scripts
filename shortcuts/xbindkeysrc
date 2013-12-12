@@ -1,0 +1,80 @@
+# For the benefit of emacs users: -*- shell-script -*-
+###########################
+# xbindkeys configuration #
+###########################
+#
+# Jeff Cody's /.xbindkeysrc file.  Feel free to use as desired.
+#
+# Version: 1.8.2
+#
+# If you edit this file, do not forget to uncomment any lines
+# that you change.
+# The pound(#) symbol may be used anywhere for comments.
+#
+# To specify a key, you can use 'xbindkeys --key' or
+# 'xbindkeys --multikey' and put one of the two lines in this file.
+#
+# The format of a command line is:
+#    "command to start"
+#       associated key
+#
+#
+# A list of keys is in /usr/include/X11/keysym.h and in
+# /usr/include/X11/keysymdef.h
+# The XK_ is not needed.
+#
+# List of modifier:
+#   Release, Control, Shift, Mod1 (Alt), Mod2 (NumLock),
+#   Mod3 (CapsLock), Mod4, Mod5 (Scroll).
+#
+
+# The release modifier is not a standard X modifier, but you can
+# use it if you want to catch release events instead of press events
+
+# By defaults, xbindkeys does not pay attention with the modifiers
+# NumLock, CapsLock and ScrollLock.
+# Uncomment the lines above if you want to pay attention to them.
+
+#keystate_numlock = enable
+#keystate_capslock = enable
+#keystate_scrolllock= enable
+
+"xbindkeys_show" 
+  control+shift + q
+
+# On my Logitech G9x, the two side buttons allow me to flip
+# through desktops
+"qdbus org.kde.kwin /KWin org.kde.KWin.previousDesktop" 
+    b:9
+"qdbus org.kde.kwin /KWin org.kde.KWin.nextDesktop" 
+    b:8
+
+"qdbus org.kde.plasma-desktop /App local.PlasmaApp.toggleDashboard"
+	Control + b:8
+
+# Pushing the mousewheel to the right...
+"qdbus org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.invokeShortcut Expose"
+   b:7
+
+# Pushing the mousewheel to the left...
+#"qdbus org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.invokeShortcut ExposeAll"
+"qdbus org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.invokeShortcut ShowDesktopGrid"
+   b:6
+
+"konsole"
+	alt + b:9
+
+"google-chrome"
+	alt + b:8
+
+#"xkill"
+#	Super + b:8
+
+# You will most likely need to specify your audio input source,
+# and the icons for muted or unmuted that you wish to use:
+"/usr/local/bin/pa-mic-toggle.sh -n alsa_input.usb-audio-technica____AT2020_USB-00-USB.analog-stereo -m /usr/share/icons/HighContrast/48x48/status/microphone-sensitivity-muted.png -u /usr/share/icons/HighContrast/48x48/status/microphone-sensitivity-high.png"
+    m:0x10 + c:198
+
+##################################
+# End of xbindkeys configuration #
+##################################
