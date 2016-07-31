@@ -44,9 +44,9 @@
 
 # On my Logitech G9x, the two side buttons allow me to flip
 # through desktops
-"qdbus org.kde.kwin /KWin org.kde.KWin.previousDesktop" 
+"qdbus org.kde.KWin /KWin org.kde.KWin.previousDesktop"
     b:9
-"qdbus org.kde.kwin /KWin org.kde.KWin.nextDesktop" 
+"qdbus org.kde.KWin /KWin org.kde.KWin.nextDesktop"
     b:8
 
 "qdbus org.kde.plasma-desktop /App local.PlasmaApp.toggleDashboard"
