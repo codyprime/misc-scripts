@@ -61,7 +61,7 @@
 "qdbus org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.invokeShortcut ShowDesktopGrid"
    b:6
 
-"konsole"
+#"konsole"
 	alt + b:9
 
 "google-chrome"
@@ -72,9 +72,43 @@
 
 # You will most likely need to specify your audio input source,
 # and the icons for muted or unmuted that you wish to use:
+#    m:0x10 + c:191
+#    Control+Mod2 + XF86AudioMute
 "/usr/local/bin/pa-mic-toggle.sh -n alsa_input.usb-audio-technica____AT2020_USB-00-USB.analog-stereo -m /usr/share/icons/HighContrast/48x48/status/microphone-sensitivity-muted.png -u /usr/share/icons/HighContrast/48x48/status/microphone-sensitivity-high.png"
-    m:0x10 + c:198
+    m:0x14 + c:121
 
-##################################
-# End of xbindkeys configuration #
+#    Release + m:0x10 + c:197
+#    Mod2 + NoSymbol
+"/home/jcody/bin/google-play-thumbs.sh up"
+     Release + m:0x14 + c:112
+
+#    Release + m:0x10 + c:198
+#    Mod2 + NoSymbol
+"/home/jcody/bin/google-play-thumbs.sh down"
+     Release + m:0x14 + c:117
+
+"/home/jcody/bin/google-play-thumbs.sh seek_fwm"
+    Shift+Mod2 + XF86AudioNext
+
+"/home/jcody/bin/google-play-thumbs.sh seek_bwd"
+    Shift+Mod2 + XF86AudioPrev
+
+#    m:0x10 + c:192
+#    Mod2 + XF86Launch5
+"/home/jcody/bin/pa-toggle-output-sink.sh"
+    m:0x18 + c:121
+    Alt+Mod2 + XF86AudioMute
+
+# you may want to run 'xset -r 110'
+"/home/jcody/bin/google-play-hover.sh start"
+    Control+Mod2 + Home
+
+"/home/jcody/bin/google-play-hover.sh end"
+    Control+Mod2 + Home + release
+
+
+
+#################################
+#    Control+Mod2 + Home
+#
 ##################################
